@@ -1,0 +1,17 @@
+let = var, const
+
+loop: while, do, for
+  for (variable;expression/condition;updates) {
+  }
+break
+continue
+
+//switch from many cases, or go default.
+switch (){
+  case "name":
+  ;
+  default:
+  ;
+}
+
+constructor? ch.6
