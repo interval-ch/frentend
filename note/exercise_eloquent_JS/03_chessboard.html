@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<script>
+let count=8; content=''
+for (let row=1; row<=count; row++){
+  for (let column=1; column<=count+1; column++){
+    if (column==count+1){
+      content+='\n';
+      break;
+    }
+    else if ((row+column)%2==0){
+      content+=' ';
+    }
+    else {
+      content+='#';
+    }
+  }
+}
+console.log(content)
+
+</script>
