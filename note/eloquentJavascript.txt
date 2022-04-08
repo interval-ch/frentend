@@ -15,3 +15,19 @@ switch (){
 }
 
 constructor? ch.6
+
+ch.3 p56
+defining a function
+(1)
+  const functionName = function(parameter){
+    statements;
+  }
+(2)Declaration notation
+  function functionName(parameter) {
+    statements;
+  }
+(3)Arrow functions
+  const functionName = (parameter) => {statements};
+基本沒差異，最後者2015新增以簡化函式
+
+lexical scoping
