@@ -31,3 +31,5 @@ defining a function
 基本沒差異，最後者2015新增以簡化函式
 
 lexical scoping
+
+Closure p47. 有點奇怪，最好再看一下函式的定義方式
