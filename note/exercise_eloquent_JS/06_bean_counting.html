@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<script>
+
+const countBs = (string) => {
+  //計算有多少B
+  let count = 0;
+  for (let char=0; string.length> char ;char++){
+    if (string[char]==='B') {
+      count++;
+    }
+  }
+  return count;
+}
+
+const countChar = (str, charCounted) => {
+  //計算有多少特定字母
+  let count = 0;
+  for (let char=0; str.length> char ;char++){
+    if (str[char]=== charCounted) {
+      count++;
+    }
+  }
+  return count;
+}
+
+
+</script>

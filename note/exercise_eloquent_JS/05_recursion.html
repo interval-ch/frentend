@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<script>
+
+const isEven = (num) => {
+  let answer
+  if (num == 0){
+    answer = true;
+  }
+  else if (num == 1){
+    answer = false;
+  }
+  else {
+    //正數可以直接-2;負數改成+2
+    if (num>0){
+      answer = isEven(num-2);
+    }
+    else {
+      answer = isEven(num+2);
+    }
+  }
+  return answer
+}
+
+
+
+</script>
