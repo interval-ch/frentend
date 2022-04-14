@@ -37,3 +37,12 @@ Closure p47. 有點奇怪，最好再看一下函式的定義方式
 Data set
   properties: eg. math.max; string.length
     value['string']
+  methods:
+    properties that contain functions
+    eg. array.push();array.pop()
+  objects
+    Values of the type object are arbitrary collections of properties.
+    eg. let day1 = {
+      squirrel:false,
+      events:["work";"touched tree"]
+    };
