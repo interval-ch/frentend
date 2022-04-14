@@ -33,3 +33,7 @@ defining a function
 lexical scoping
 
 Closure p47. 有點奇怪，最好再看一下函式的定義方式
+
+Data set
+  properties: eg. math.max; string.length
+    value['string']
