@@ -46,3 +46,8 @@ Data set
       squirrel:false,
       events:["work";"touched tree"]
     };
+
+object.assign()
+
+phi 相關
+  Math.sqrt()
