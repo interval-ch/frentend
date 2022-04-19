@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<script>
+
+function range(start,end){
+  let list = [];
+  for (let i=start;i<=end;i++){
+    list.push(i);
+  }
+  return list;
+}
+
+const sum = (list) =>{
+  let ans=0;
+  for (let index=0;index<list.length;index++){
+    ans+=list[index];
+  }
+  return ans;
+}
+
+const rangeBonus = (start, end, step) =>{
+  let list = [];
+  if (step>0){
+    for (let i=start;i<=end;i+=step){
+      list.push(i);
+    }
+  }
+  else {
+    for (let i=start;i>=end;i+=step){
+      list.push(i);
+    }
+  }
+  return list;
+}
+
+
+</script>
