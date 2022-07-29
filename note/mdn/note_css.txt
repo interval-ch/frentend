@@ -1,0 +1,43 @@
+單位：px, em,
+
+selector : describes what elements the rule will match and applied style to them.
+
+eg. 
+p {
+} 選擇所有p elements
+
+div.warning {
+} 選擇class="warning" 的 div
+
+	也可以多class連著使用。.notebox.danger{ } class="notebox danger"才會被選到
+	
+#customizedID {
+} 選擇ID
+
+h1, .warning {
+} 使用逗號隔開selector可讓規則同時作用於兩者
+如果selector invalid(只要多個之一有問題), 則此條規則會被無視。
+
+type, class, ID seletors:
+	target html elements (like eg. above)
+
+attribute selectors:
+	select elements based on the presence of a certain attribute on an element (even base on certain value)
+	a[title] {}
+	a[href="https://example.com"] { }
+
+Pseudo-classes and pseudo-elements:
+	虛擬類別 偽類別/ 虛擬元素 (選取某元素中的部分，而非整體)
+	a:hover {} / p::first-line { } p元素裡的第一行
+	
+combinators:
+	eg. direct children (>)
+		article > p { } 選取article裡面的子元素p
+
+universal selector： (*) 
+	選取所有元素，可跟(>)一起使用。或用來增加辨識度
+	eg. 
+	article *:first-child {
+  		font-weight: bold;
+		} 選取所有article的第一子元素
+
