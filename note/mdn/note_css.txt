@@ -10,7 +10,7 @@ div.warning {
 } 選擇class="warning" 的 div
 
 	也可以多class連著使用。.notebox.danger{ } class="notebox danger"才會被選到
-	
+
 #customizedID {
 } 選擇ID
 
@@ -21,7 +21,7 @@ h1, .warning {
 type, class, ID seletors:
 	target html elements (like eg. above)
 
-attribute selectors:
+attribute selectors: (屬性選擇器)
 	select elements based on the presence of a certain attribute on an element (even base on certain value)
 	a[title] {}
 	a[href="https://example.com"] { }
@@ -34,6 +34,8 @@ combinators:
 	eg. direct children (>)
 		article > p { } 選取article裡面的子元素p
 
+
+--------------
 universal selector： (*) 
 	選取所有元素，可跟(>)一起使用。或用來增加辨識度
 	eg. 
@@ -41,3 +43,37 @@ universal selector： (*)
   		font-weight: bold;
 		} 選取所有article的第一子元素
 
+-----------
+Presence and value selectors
+eg.
+a[title]
+a[href="https://example.com"]
+p[class~="special"] 使用~ 則class="special nice" 也會被選
+
+------
+
+Substring matching selectors
+
+li[class^="box-"] class start with 
+li[class$="-box"] class end with
+li[class*="box"] class contains value anywhere within the string
+
+(Aside: It may help to note that ^ and $ have long been used as anchors in so-called regular expressions to mean begins with and ends with respectively.)
+
+li[class^="a" i] "i" for case insensitive 預設html語言中的大小寫會影響選擇，反之則加入i來告知瀏覽器要忽略大小寫
+
+
+---
+Pseudo-classes are keywords that start with a colon:
+eg. 
+:pseudo-class-name  選取既有的元素(特定條件時)
+
+Pseudo-elements start with a double colon ::
+::pseudo-element-name  像是創造一個新的虛擬元素
+
+可串接使用
+article p:first-child::first-line {}
+	選取所有article的第一子元素p的第一行
+---
+
+Pseudo-classes enable you to target an element when it's in a particular state, as if you had added a class for that state to the DOM. Pseudo-elements act as if you had added a whole new element to the DOM, and enable you to style that. The ::before and ::after pseudo-elements enable you to insert content into the document using CSS.
