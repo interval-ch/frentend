@@ -34,6 +34,15 @@ combinators:
 	eg. direct children (>)
 		article > p { } 選取article裡面的子元素p
 
+	Descendant combinator ( )
+	如果是 article p { } 則會選到article裡面的子、孫、曾孫、等p元素
+
+	Adjacent sibling combinator (+)
+	同階的相鄰元素
+	p + img {} 選P之後的那個img
+
+	General sibling combinator (~)
+	p ~ img {} 選P之後所有的img
 
 --------------
 universal selector： (*) 
@@ -77,3 +86,32 @@ article p:first-child::first-line {}
 ---
 
 Pseudo-classes enable you to target an element when it's in a particular state, as if you had added a class for that state to the DOM. Pseudo-elements act as if you had added a whole new element to the DOM, and enable you to style that. The ::before and ::after pseudo-elements enable you to insert content into the document using CSS.
+
+
+
+===================sum up==============
+Basic selectors
+
+    Type selectors elementname
+    Class selectors .classname
+    ID selectors #idname
+    Universal selectors * ns|* *|*
+    Attribute selectors [attr=value]
+    State selectors a:active, a:visited
+
+Grouping selectors
+
+    Selector list A, B
+
+Combinators
+
+    Adjacent sibling selectors A + B
+    General sibling selectors A ~ B
+    Child selectors A > B
+    Descendant selectors A B
+
+Pseudo
+
+    Pseudo classes :
+    Pseudo elements ::
+
