@@ -1,3 +1,8 @@
-let arr = ["t", "e", "s", "t"];
-console.log(typeof arr.slice(1)[1]);
-console.log(typeof arr.slice(2));
+const person = {
+	name: ['Bob', 'Smith'],
+  };
+
+const one = [];
+
+console.log(typeof person.name);
+console.log(typeof one);
