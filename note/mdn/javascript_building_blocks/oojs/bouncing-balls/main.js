@@ -46,7 +46,7 @@ class Ball {
 			this.velX = -(this.velX);
 		}
 
-		if ((this.y + this.size) >= length) {
+		if ((this.y + this.size) >= height) {
 			this.velY = -(this.velY);
 		}
 
@@ -57,4 +57,49 @@ class Ball {
 		this.x += this.velX;
 		this.y += this.velY;
 	}
+
+	collisionDetect() {
+		for (const ball of balls) {
+			if (this !== ball) { // 如果this跟目前的ball不是同一顆
+				const dx = this.x - ball.x; //兩顆球X軸位置的差異
+				const dy = this.y - ball.y;
+				const distance = Math.sqrt(dx * dx + dy * dy); //距離，勾股
+			
+				if (distance < this.size + ball.size) {
+					ball.color = this.color = randomRGB(); //撞到一起變色
+				}
+			}
+		}
+	}
 }
+
+const balls = [];
+
+while (balls.length < 25) {
+	const size = random(10, 20);
+	const ball = new Ball(
+		random(0 + size, width - size),
+		random(0 + size, height - size),
+		random(-3, 3),
+		random(-3, 3),
+		randomRGB(),
+		size
+	);
+
+	balls.push(ball);
+}
+
+function loop() {
+	ctx.fillStyle  = 'rgba(0, 0, 0, 0.25)';
+	ctx.fillRect(0, 0, width, height);
+
+	for (const ball of balls) {
+		ball.draw();
+		ball.update();
+		ball.collisionDetect();
+	}
+
+	requestAnimationFrame(loop);
+}
+
+loop();
