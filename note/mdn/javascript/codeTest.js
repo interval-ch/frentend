@@ -1,20 +1,7 @@
-function sumToLoop(n) {
-	let ans = 0;
-	for (let i = 0; i <= n; i++) {
-		ans += i;
-	}
-	return ans;
-}
+let arr = [2,4,3];
+let ans;
+ans = arr.reduceRight(0, current, index, arr => {
+	Math.pow(10,((arr.length()-1)-index));
+}, 0);
 
-function sumToRecursion(n) {
-	if (n == 1) return 1;
-	else return n + sumToRecursion(n-1)
-}
-
-function sumToArithmetic(n) {
-	return (1+n)*n*0.5
-}
-
-console.log(sumToLoop(100000));
-console.log(sumToRecursion(100000));
-console.log(sumToArithmetic(100000));
+console.log(and);
