@@ -1,15 +1,12 @@
-function myFunction(a, b) {
-	let done = 0;
-	let count = 0;
-	while (true) {
-		let found = a.indexOf(b, done);
-		if (found == -1) {break
-		} else { 
-		count += 1;
-		done = found;
-		}
+function aha(x, y) {
+	if ((x % y) === 0) {
+		return x
+	} else {
+		return y * Math.ceil(x/y);
 	}
-	return count;
 }
 
-console.log(myFunction('m', 'how many times does the character occur in this sentence?'));
+console.log(aha(1,23));
+console.log(aha(23,23));
+console.log(aha(7,3));
+console.log(aha(-5,7));
