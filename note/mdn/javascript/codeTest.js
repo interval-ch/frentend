@@ -1,17 +1,17 @@
-const obj = {
-  log: ['example','test'],
-  get latest() {
-    if (this.log.length === 0) return undefined;
-    return this.log[this.log.length - 1];
-  }
+function
+myFunction
+(
+a, b
+)
+{
+let arr = [];   
+let c = a;
+for (let i = 0; i < (Math.ceil(a.length/3)); i++) {
+  console.log(i);
+  arr.unshift(c.slice(-3));
+  c = c.slice(0,-3);
+} 
+console.log(arr);
+return arr.join(b);
 }
-console.log(obj.latest); // "test"
-
-const obj2 = {
-  log: ['example','test'],
-  latest() {
-    if (this.log.length === 0) return undefined;
-    return this.log[this.log.length - 1];
-  }
-}
-console.log(obj2.latest()); // "test"
+console.log(myFunction('1234567','.'));
