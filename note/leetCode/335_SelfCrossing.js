@@ -28,8 +28,8 @@
 					x += 1;
 					break;
 			} 
-			let boo = set.has(`${x},${y}`);
-			console.log(`i:${i}, x:${x}, y:${y}, set.has:${boo}`)
+			//let boo = set.has(`${x},${y}`);
+			//console.log(`i:${i}, x:${x}, y:${y}, set.has:${boo}`)
 
 			if (set.has(`${x},${y}`)) {
 				cross =  true;
@@ -39,7 +39,3 @@
   });
 	return cross;
 };
-
-
-let aha = [1,1,1,1];
-console.log(isSelfCrossing(aha));
