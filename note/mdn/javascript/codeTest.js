@@ -1,45 +1,55 @@
-/**
- * @param {number[]} distance
- * @return {boolean}
- */
- var isSelfCrossing = function(distance) {
-  const set = new Set();
-	set.add(`0,0`);
-  let x = 0;
-  let y = 0;
-	let cross = false;
 
-  //loop through array
-  distance.forEach((value,index) => {
-		//how many step 
-		for (let i = 1; i <= value; i++) {
-			// direction
-			switch ((index+1) % 4) {
-				case 1:
-					y += 1;
-					break;
-				case 2:
-					x -= 1;
-					break;
-				case 3:
-					y -= 1;
-					break;	
-				case 0:
-					x += 1;
-					break;
-			} 
-			let boo = set.has(`${x},${y}`);
-			console.log(`i:${i}, x:${x}, y:${y}, set.has:${boo}`)
 
-			if (set.has(`${x},${y}`)) {
-				cross =  true;
-			}
-			set.add(`${x},${y}`);
-		}
-  });
-	return cross;
+var BrowserHistorys = function(homepage) {
+	this.current = homepage;
+	this.history = [homepage];
+	this.forward = [];
+	this.prototype = {};
 };
 
+/** 
+* @param {string} url
+* @return {void}
+*/
+BrowserHistory.prototype.visit = function(url) {
+this.history.push(this.current);  
+this.current = url;
+this.forward = [];
+return null;
+};
 
-let aha = [1,1,1,1];
-console.log(isSelfCrossing(aha));
+/** 
+* @param {number} steps
+* @return {string}
+*/
+BrowserHistory.prototype.back = function(steps) {
+if (this.history.length === 0) {}
+else if (this.history.length >= steps) {
+	this.current = this.history[this.history.length - steps];
+	this.forward = this.history.slice(this.history.length - steps + 1,);
+	this.history = this.history.slice(0,-steps);
+}
+else if (this.history.length < steps) {
+	this.current = this.history[0];
+	this.forward = this.history.slice(1,);
+	this.history = [];
+}
+return this.current;
+};
+
+/** 
+* @param {number} steps
+* @return {string}
+*/
+BrowserHistory.prototype.forward = function(steps) {
+this.current = 'aaaa';
+return this.current
+};
+
+/** 
+* Your BrowserHistory object will be instantiated and called as such:
+* var obj = new BrowserHistory(homepage)
+* obj.visit(url)
+* var param_2 = obj.back(steps)
+* var param_3 = obj.forward(steps)
+*/
