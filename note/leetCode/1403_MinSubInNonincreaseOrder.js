@@ -13,7 +13,7 @@
 		if (current > sum/2) {
 			indexMoreThanHalf = i;
 			break;
-		}
+    }
 		current += nums[i];
 	}
   return nums.splice(0, indexMoreThanHalf);
