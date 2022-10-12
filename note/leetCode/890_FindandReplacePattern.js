@@ -12,13 +12,13 @@ const findAndReplacePattern = function(words, pattern) {
     for (let i = 0; i < word.length; i++) {
       if (map.has(pattern[i]) && (map.get(pattern[i]) !== word[i])) {
         return false
-      } else if (!map.has(pattern[i]) && set.has(word[i])) {
-        return false
       } else if (!map.has(pattern[i])) {
+        if (set.has(word[i])) {
+          return false
+        }
         map.set(pattern[i], word[i]);
         set.add(word[i]);
       }
-        
     }
     return true
   })
