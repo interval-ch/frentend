@@ -2,33 +2,54 @@
  * @param {number[]} nums
  * @return {number}
  */
-function waysToMakeFair(nums) {
-  let counter = 0;
-
-  const left = [0, 0]
-  const right = [0, 0]
-
+const waysToMakeFair = function(nums) {
+  let oddSum = 0; 
+  let evenSum = 0 ;
+  let count = 0;
+  
   for (let i = 0; i < nums.length; i++) {
-    right[i % 2] += nums[i]
+      if (i % 2 === 0) {
+          evenSum += nums[i];
+      } else {
+          oddSum += nums[i];
+      }
   }
-	console.log(`right:`, right);
-
+  
+  
   for (let i = 0; i < nums.length; i++) {
-    right[i % 2] -= nums[i];
+      if (i % 2 === 0) {
+          console.log(`i: ${i}`, `num: `, nums[i]);
+          console.log(`evenSum : `,evenSum,`oddSum : `,oddSum);
+          
+          evenSum -= nums[i];
 
-		console.log(`nums[${i}]`, nums[i]);
+          console.log(`evenSum : `,evenSum,`oddSum : `,oddSum);
 
-    if(left[0] + right[1] === left[1] + right[0]) counter++
+          if (evenSum === oddSum) {
+              count++; 
+          }
 
-		console.log(left[0],right[1],`:`,left[1] , right[0]);
+          oddSum += nums[i];
+          console.log(`evenSum : `,evenSum,`oddSum : `,oddSum);
 
-		console.log(right);
+      } else {
+          console.log(`i: ${i}`, `num: `,nums[i]);
+          console.log(`evenSum : `,evenSum,`oddSum : `,oddSum);          
+          oddSum -= nums[i];
 
-    left[i % 2] += nums[i];
+          console.log(`evenSum : `,evenSum,`oddSum : `,oddSum); 
+          if (evenSum === oddSum) {
+              count++;
+          }
+
+          evenSum += nums[i];
+          console.log(`evenSum : `,evenSum,`oddSum : `,oddSum); 
+          
+      }
   }
-
-  return counter;
+  
+  return count;
 };
 
 const nums = [2,1,6,4];
-console.log(waysToMakeFair(nums));
+waysToMakeFair(nums);
