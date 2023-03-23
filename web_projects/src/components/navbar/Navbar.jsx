@@ -14,11 +14,8 @@ const Menu = () => {
 		</>
 	)
 }
-
-
 // BEM => block element modifier
 // maming method?
-
 const Navbar = () => {
 	const [toggleMenu, setToggleMenu] = useState(false);
 
