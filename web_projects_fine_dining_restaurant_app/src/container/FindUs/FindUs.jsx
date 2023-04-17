@@ -1,10 +1,9 @@
-import React from 'react'
-import './findus.css'
+import React from 'react';
 
-const FindUs = () => {
-	return (
-		<div>FindUs</div>
-	)
-}
+const FindUs = () => (
+  <div>
+    FindUs
+  </div>
+);
 
-export default FindUs
+export default FindUs;

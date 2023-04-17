@@ -1,10 +1,11 @@
-import React from 'react'
-import './laurels.css'
+import React from 'react';
 
-const Laurels = () => {
-	return (
-		<div>Laurels</div>
-	)
-}
+import './Laurels.css';
 
-export default Laurels
+const Laurels = () => (
+  <div>
+    Laurels
+  </div>
+);
+
+export default Laurels;

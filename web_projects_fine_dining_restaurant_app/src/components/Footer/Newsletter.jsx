@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import './newsletter.css'
+import './Newsletter.css';
 
-const Newsletter = () => {
-	return (
-		<div>Newsletter</div>
-	)
-}
+const Newsletter = () => (
+  <div>
+    Newsletter
+  </div>
+);
 
-export default Newsletter
+export default Newsletter;
