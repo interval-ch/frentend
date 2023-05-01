@@ -73,6 +73,7 @@
 
 	flex-direction: column;
 	z-index: 5;
+	display: none;
 }
 
 .app__navbar-smallscreen_overlay .overlay__close {
