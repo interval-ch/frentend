@@ -5,11 +5,11 @@ import './AboutUs.css';
 
 const AboutUs = () => (
   <div id='about' className="app__aboutus app__bg flex__center section__padding">
-    <div className="app__aboutus-overlay flex-center">
+    <div className="app__aboutus-overlay flex__center">
       <img src={images.G} alt="g letter" />
     </div>
 
-    <div className="app__aboutus-content flex-center">
+    <div className="app__aboutus-content flex__center">
       <div className="app__aboutus-content_about">
         <h1 className="headtext__cormorant">About Us</h1>
         <img src={images.spoon} alt="about_spoon" className='spoon_img'/>
