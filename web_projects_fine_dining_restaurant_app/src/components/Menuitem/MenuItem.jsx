@@ -2,9 +2,9 @@ import React from 'react';
 
 import './MenuItem.css';
 
-const MenuItem = () => (
-  <div>
-    MenuItem
+const MenuItem = (item) => (
+  <div className="menuItem">
+    <h6>{item.title}</h6>
   </div>
 );
 
