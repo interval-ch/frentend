@@ -17,8 +17,3 @@
 	justify-content: center;
 	align-items: flex-start;
 }
-
-.app__specialMenu-menu_wine, .app__specialMenu-menu_cocktails{
-	display: flex;
-	flex-direction: column;
-}
